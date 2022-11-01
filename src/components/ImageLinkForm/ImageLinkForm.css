@@ -7,12 +7,21 @@
         radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 8px 9px;
     background-color: #282828;
     background-size: 16px 16px;
+    box-shadow: inset 0px 0px 50px rgb(168, 235, 18, 0.05);
+}
+
+.input {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+    border: transparent;
+
 }
 
 .btn {
-    box-shadow: 0px 0px 5px rgb(168, 235, 18);
+    box-shadow: 1px 0px 5px rgb(168, 235, 18);
     background-color: rgb(168, 235, 18);
     border: transparent;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }

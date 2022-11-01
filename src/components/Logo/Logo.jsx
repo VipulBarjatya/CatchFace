@@ -21,8 +21,8 @@ const Logo = () => {
               alignItems: "center",
               gap: "10px",
               padding: "10px",
-              boxShadow: "0px 0px 15px rgba(255,255,255,0.4) inset",
-              borderRadius: "10px",
+              boxShadow: "0px 0px 15px rgba(255,255,255,0.75) inset",
+              borderRadius: "5px",
             }}
           >
             <img src={logoImage} alt="logo" />
