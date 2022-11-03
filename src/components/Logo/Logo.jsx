@@ -5,7 +5,7 @@ import "./logo.css";
 
 const Logo = () => {
   return (
-    <div className="ma4 mt0">
+    <div className="ma4 mt0 logo">
       <Tilt
         style={{
           display: "flex",
