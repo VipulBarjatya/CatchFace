@@ -13,7 +13,11 @@ const Signin = ({ onRouteChange }) => {
         }}
       >
         <article
-          style={{ boxShadow: "0px 0px 10px inset rgba(255,255,255,0.5)" }}
+          style={{
+            boxShadow: "0px 0px 10px inset rgba(255,255,255,0.5)",
+            background: "rgba(255,255,255,0.075)",
+            backdropFilter: "blur(3px)",
+          }}
           class="br3 ba dark-gray b--white-30 mv4 w-100 w-50-m w-25-l mw5 center grow"
         >
           <main className="pa4 white-80">

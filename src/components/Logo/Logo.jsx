@@ -23,6 +23,8 @@ const Logo = () => {
               padding: "10px",
               boxShadow: "0px 0px 15px rgba(255,255,255,0.75) inset",
               borderRadius: "5px",
+              background: "rgba(255,255,255,0.075)",
+              backdropFilter: "blur(3px)",
             }}
           >
             <img src={logoImage} alt="logo" />
