@@ -10,7 +10,7 @@ import Signin from "./components/Signin/Signin";
 import Register from "./components/Register/Register";
 import "./App.css";
 
-console.log(Clarifai);
+// console.log(Clarifai);
 
 const app = new Clarifai.App({
   apiKey: "396f265e809b41d2bfb2fb8a744a989f",
@@ -25,8 +25,35 @@ class App extends Component {
       box: {},
       route: "signin",
       isSignedIn: false,
+      user: {
+        id: "",
+        name: "",
+        email: "",
+        password: "",
+        entries: 0,
+        joined: "",
+      },
     };
   }
+
+  // componentDidMount() {
+  //   fetch("http://localhost:3001")
+  //     .then((resp) => resp.json())
+  //     .then((data) => console.log(data));
+  // }
+
+  loadUser = (data) => {
+    this.setState({
+      user: {
+        id: "data.id",
+        name: "data.name",
+        email: "data.email",
+        password: "data.password",
+        entries: 0,
+        joined: "data.id",
+      },
+    });
+  };
 
   calculateFaceLocation = (data) => {
     const clarifaiFace =
@@ -93,7 +120,10 @@ class App extends Component {
         ) : this.state.route === "signin" ? (
           <Signin onRouteChange={this.onRouteChange} />
         ) : (
-          <Register onRouteChange={this.onRouteChange} />
+          <Register
+            loadUser={this.loadUser}
+            onRouteChange={this.onRouteChange}
+          />
         )}
       </div>
     );
