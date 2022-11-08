@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import ParticlesBg from "particles-bg";
-import Navigation from "./components/Navigation/Navigation";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
+import Navigation from "./components/Navigation/Navigation";
+import Signin from "./components/Signin/Signin";
+import Register from "./components/Register/Register";
 import Logo from "./components/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import Rank from "./components/Rank/Rank";
-import Signin from "./components/Signin/Signin";
-import Register from "./components/Register/Register";
 import "./App.css";
 
 // console.log(Clarifai);
@@ -21,7 +21,6 @@ const initialState = {
     id: "",
     name: "",
     email: "",
-    // password: "",
     entries: 0,
     joined: "",
   },
@@ -46,7 +45,7 @@ class App extends Component {
         name: data.name,
         email: data.email,
         // password: "data.password",
-        entries: 0,
+        entries: data.entries,
         joined: data.id,
       },
     });
@@ -68,6 +67,7 @@ class App extends Component {
 
   displayFaceBox = (box) => {
     this.setState({ box: box });
+    console.log(box);
   };
 
   onInputChange = (event) => {
