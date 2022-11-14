@@ -23,7 +23,7 @@ class Register extends React.Component {
   };
 
   onSubmitSignIn = () => {
-    fetch("https://git.heroku.com/catchfacev1.git/register", {
+    fetch("https://catchfacev1.herokuapp.com/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -42,7 +42,7 @@ class Register extends React.Component {
   };
 
   render() {
-    // const { onRouteChange } = this.props;
+    const { onRouteChange } = this.props;
     return (
       <div className="" style={{ overflow: "hidden" }}>
         <Tilt
