@@ -42,7 +42,7 @@ class Register extends React.Component {
   };
 
   render() {
-    const { onRouteChange } = this.props;
+    // const { onRouteChange } = this.props;
     return (
       <div className="" style={{ overflow: "hidden" }}>
         <Tilt
